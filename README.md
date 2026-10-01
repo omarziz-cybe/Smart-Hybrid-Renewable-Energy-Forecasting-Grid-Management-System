@@ -37,7 +37,7 @@ As the penetration of electric vehicles increases, charging infrastructure place
 
 
 ⚙️ Methodology & PipelineData Ingestion & Alignment:Dynamic batch reading across Excel/CSV sheets using automated timestamp parsing.Entity-relation joins between time-series observations and hardware specifications (ChargerID, GroupID).Feature Engineering:Cyclical Encoding: Captures 24-hour and 12-month periodicity via trigonometric transforms:$$\text{hour\_sin} = \sin\left(\frac{2\pi \cdot \text{hour}}{24}\right), \quad \text{hour\_cos} = \cos\left(\frac{2\pi \cdot \text{hour}}{24}\right)$$Lag Features: Historical consumption offsets ($t-1$, $t-4$ [1 hour], $t-96$ [24 hours]).Rolling Statistics: Moving averages and standard deviations across short-term windows.Model Training & Evaluation:Time-series aware sequential train/test split (80% / 20%).Evaluation metrics:MAE (Mean Absolute Error)RMSE (Root Mean Squared Error)$R^2$ ScoreGrid Overload Simulation:Threshold monitoring identifying potential capacity violations before peak demand occurs.🚀 Getting StartedPrerequisitesMake sure you have Python 3.9+ installed.InstallationClone the repository:
-git clone [https://github.com/your-username/smart-energy-forecasting.git](https://github.com/your-username/smart-energy-forecasting.git)
+git clone [https://github.com/omarziz-cybe/smart-energy-forecasting.git](https://github.com/omarziz-cybe/smart-energy-forecasting.git)
 cd smart-energy-forecasting
 pip install -r requirements.txt
 streamlit run app.py
